@@ -7,10 +7,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class StartController {
+
     @RequestMapping("/index")
     @ResponseBody
     public ModelAndView index(ModelAndView mv){
         mv.setViewName("index");
+        return mv;
+    }
+
+    public ModelAndView list(ModelAndView mv){
+        mv.setViewName("list");
         return mv;
     }
 }
